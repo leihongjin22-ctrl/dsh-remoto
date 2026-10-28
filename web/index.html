@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>DSH Remoto</title>
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="theme-light.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header id="topbar" class="topbar"></header>
+      <div id="banner" class="banner hidden"></div>
+      <main id="view" class="view"></main>
+      <footer id="composer" class="composer hidden">
+        <div id="attachStrip" class="attach-strip hidden"></div>
+        <div class="composer-row">
+          <button class="plus-btn" data-action="open-attach" aria-label="添加附件" title="添加附件">+</button>
+          <textarea id="composerInput" rows="1" placeholder="给电脑发消息…" autocomplete="off"></textarea>
+          <button id="sendBtn" class="send-btn" data-action="send" aria-label="发送">↑</button>
+        </div>
+      </footer>
+      <nav id="tabbar" class="tabbar">
+        <button data-action="tab" data-view="sessions"><span>会话</span></button>
+        <button data-action="tab" data-view="hosts"><span>主机</span></button>
+        <button data-action="tab" data-view="settings"><span>设置</span></button>
+      </nav>
+    </div>
+    <div id="toastWrap" class="toast-wrap"></div>
+    <div id="sheetWrap" class="sheet-wrap hidden">
+      <div class="sheet-backdrop" data-action="close-sheet"></div>
+      <div id="sheet" class="sheet"></div>
+    </div>
+    <input id="imageInput" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden />
+    <input id="fileInput" type="file" multiple hidden />
+    <script>
+      window.DRC_DEFAULTS = { relayUrl: '', hostLabel: '我的电脑' };
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>

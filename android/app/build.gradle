@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.dsh.remoto.newapp'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'com.dsh.remoto.newapp'
+        minSdk 24
+        targetSdk 34
+        versionCode 11
+        versionName '0.4.0'
+    }
+
+    signingConfigs {
+        // Use Gradle's auto-generated debug key for source builds.
+        // For a production release, replace this with your own signing config.
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/*.version', 'META-INF/*.kotlin_module']
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.google.zxing:core:3.4.1'
+}

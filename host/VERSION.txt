@@ -1,0 +1,6 @@
+DSH Remoto host package
+version : 0.4.0
+plugin  : @dsh-remote/plugin 0.5.3
+relay   : bundled relay 0.5.1 (LAN mode)
+protocol: wire 1 / protocol 0.5.4
+phone   : DSH-remoto-0.4.0.apk

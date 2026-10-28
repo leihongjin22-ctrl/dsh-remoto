@@ -1,0 +1,22 @@
+{
+  "name": "dsh-remoto",
+  "private": true,
+  "version": "0.4.0",
+  "description": "End-to-end encrypted Android remote control for DeepSeek Harness, with a Windows host and self-hosted relay",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test --test-force-exit tests/*.test.mjs",
+    "test:ui": "node tools/ui-e2e.mjs",
+    "test:host": "node host/selftest.mjs",
+    "probe:host": "node tools/probe-real-host.mjs",
+    "build:web": "node tools/build-web.mjs",
+    "build:apk": "node tools/build-apk.mjs",
+    "build:host": "node tools/build-host.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

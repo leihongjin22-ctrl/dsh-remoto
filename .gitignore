@@ -1,0 +1,30 @@
+# Build outputs
+dist/
+build/
+android/.gradle/
+android/app/build/
+android/app/src/main/assets/www/
+android/local.properties
+node_modules/
+
+# Local host runtime state
+host/backup-*/
+host/relay.log
+host/relay.log.err
+host/relay.pid
+host/relay-state.json
+host/install-state.json
+host/token.txt
+host/relay.txt
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Signing material must never be committed
+android/keystore/
+*.jks
+*.keystore
